@@ -1,4 +1,4 @@
-#  Protein Mutaion caused Drug Resistance
+#  Protein Mutation caused Drug Resistance
 
 to analyze protein drug binding with Thermodynamic Integration (TI) simulations 
 
