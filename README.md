@@ -1,4 +1,4 @@
-# Drug Resistance induced by protein mutaion
+#  Protein Mutaion caused Drug Resistance
 
-to analyze protein drug binding with TI simulations 
+to analyze protein drug binding with Thermodynamic Integration (TI) simulations 
 ![](./EGFR_T790M.jpg)
