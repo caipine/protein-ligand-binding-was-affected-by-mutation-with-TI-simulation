@@ -1,0 +1,162 @@
+-I: Adding /home/qcai1/amber18/dat/leap/prep to search path.
+-I: Adding /home/qcai1/amber18/dat/leap/lib to search path.
+-I: Adding /home/qcai1/amber18/dat/leap/parm to search path.
+-I: Adding /home/qcai1/amber18/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source tleap.gas.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap.gas.in
+----- Source: /home/qcai1/amber18/dat/leap/cmd/leaprc.gaff
+----- Source of /home/qcai1/amber18/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+----- Source: /home/qcai1/amber18/dat/leap/cmd/leaprc.phosaa10
+----- Source of /home/qcai1/amber18/dat/leap/cmd/leaprc.phosaa10 done
+Log file: ./leap.log
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/frcmod.phosaa10
+Reading force field modification type file (frcmod)
+Reading title:
+Bonded parameters and revised vdW parameters for phosphorylated amino acids.
+Loading library: /home/qcai1/amber18/dat/leap/lib/phos_amino94.lib
+Loading parameters: ./gefitinib.bcc.mol2.precharged.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Using ArgH and AspGluO modified Bondi2 radii
+Loading Mol2 file: ./gefitinib.bcc.mol2
+Reading MOLECULE named 2ITO
+Total unperturbed charge:   1.003100
+Total perturbed charge:     1.003100
+Checking Unit.
+
+/home/qcai1/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (1.003100) is not zero.
+
+/home/qcai1/amber18/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 15 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	IRE	1
+  )
+ (no restraints)
+----- Source: /home/qcai1/amber18/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /home/qcai1/amber18/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /home/qcai1/amber18/dat/leap/lib/amino12.lib
+Loading library: /home/qcai1/amber18/dat/leap/lib/aminoct12.lib
+Loading library: /home/qcai1/amber18/dat/leap/lib/aminont12.lib
+----- Source: /home/qcai1/amber18/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/qcai1/amber18/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /home/qcai1/amber18/dat/leap/lib/atomic_ions.lib
+Loading library: /home/qcai1/amber18/dat/leap/lib/solvents.lib
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /home/qcai1/amber18/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading PDB file: /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR-md/001.protein/0.15_80_10_pH6.5_2ITO_fixed_loop_701_982.result_noH.pdb
+  total atoms in file: 2264
+  Leap added 2332 missing atoms according to residue templates:
+       2332 H / lone pairs
+Total unperturbed charge:   3.000000
+Total perturbed charge:     3.000000
+Checking Unit.
+
+/home/qcai1/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (3.000000) is not zero.
+
+/home/qcai1/amber18/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 863 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CGLN	1
+	NGLN	1
+  )
+ (no restraints)
+Writing pdb file: 2ITO.gefitinib.bcc.gas.complex.pdb
+
+/home/qcai1/amber18/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NGLN -> GLN
+
+/home/qcai1/amber18/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CGLN -> GLN
+Checking Unit.
+
+/home/qcai1/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (4.003100) is not zero.
+
+/home/qcai1/amber18/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 878 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CGLN	1
+	IRE	1
+	NGLN	1
+  )
+ (no restraints)

@@ -1,0 +1,12 @@
+#!/bin/tcsh -fe
+set system      = "/home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR-md"
+set main_folder = "2ITO.gefitinib.bcc"
+set lig_name    = "gefitinib.bcc"
+set lig         = "gefitinib.bcc.mol2"
+set rec         = "0.15_80_10_pH6.5_2ITO_fixed_loop_701_982.result_noH.pdb"
+set gpu_list         = "0,1"
+set rec_name    = "2ITO"
+set AA_length   = "282"
+set lig_resid   = "283"
+set Na_num      = "12"
+set Cl_num      = "12"

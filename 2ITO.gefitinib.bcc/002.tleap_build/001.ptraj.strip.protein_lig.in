@@ -1,0 +1,4 @@
+parm      /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR-md/2ITO.gefitinib.bcc/002.tleap_build/2ITO.gefitinib.bcc.wet.complex.prmtop 
+trajin    /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR-md/2ITO.gefitinib.bcc/002.tleap_build/2ITO.gefitinib.bcc.wet.complex.rst7 
+strip :1-283 outprefix stripped_water.complex
+trajout   /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR-md/2ITO.gefitinib.bcc/002.tleap_build/water_ions.pdb pdb

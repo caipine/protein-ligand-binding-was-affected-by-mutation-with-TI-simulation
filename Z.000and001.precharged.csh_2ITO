@@ -1,0 +1,30 @@
+source Z.0000.set_system.csh_2ITO
+
+foreach ligand (`cat ligand.list`)
+echo working on ${ligand}.mol2
+mkdir ${rec_name}.${ligand}
+cp running_docked_scored_ligands/${ligand}.mol2 ${rec_name}.${ligand}  
+
+cd ${rec_name}.${ligand}
+####################
+cat <<EOFA >00.source.sh
+#!/bin/tcsh -fe
+set system      = "${system_outside}"
+set main_folder = "${rec_name}.${ligand}"
+set lig_name    = "${ligand}"
+set lig         = "${ligand}.mol2"
+set rec         = "${rec_0}"
+set gpu_list         = "${gpu_list}"
+set rec_name    = "${rec_name}"
+set AA_length   = "${AA_length}"
+set lig_resid   = "${lig_resid}"
+set Na_num      = "${Na_num}"
+set Cl_num      = "${Cl_num}"
+EOFA
+####################
+
+cp ${system_outside}/scripts/01.tleap.bcc.csh_precharged ${system_outside}/${rec_name}.${ligand}/01.tleap.${ligand}.csh
+cd ${system_outside}/${rec_name}.${ligand}
+tcsh 01.tleap.${ligand}.csh
+cd ${system_outside}
+end

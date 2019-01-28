@@ -1,0 +1,5 @@
+parm      /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/2ITO.gefitinib.bcc/setup/complex.parm7 
+trajin    /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/2ITO.gefitinib.bcc/setup/complex.rst7 
+strip :565 outprefix stripped_lig
+trajout   /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/2ITO.gefitinib.bcc/setup/protein.rst7
+trajout   /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/2ITO.gefitinib.bcc/setup/protein.pdb pdb

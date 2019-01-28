@@ -1,0 +1,21 @@
+#source /opt/apps/intel16/cray_mpich_7_3/amber/16.0/dat/leap/cmd/oldff/leaprc.ff14SB
+source leaprc.gaff
+source leaprc.phosaa10
+loadamberparams gefitinib.bcc.mol2.precharged.frcmod
+set default PBradii mbondi3
+lig =  loadmol2    gefitinib.bcc.mol2
+charge lig # 1.0
+saveamberparm  lig    gefitinib.bcc.gas.prmtop    gefitinib.bcc.gas.rst7
+
+#source /opt/apps/intel16/cray_mpich_7_3/amber/16.0/dat/leap/cmd/leaprc.protein.ff14SB
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+loadamberparams frcmod.ionsjc_tip3p
+rec = loadpdb /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR-md/001.protein/0.15_80_10_pH6.5_2ITO_fixed_loop_701_982.result_noH.pdb
+charge rec #3.0
+saveamberparm rec 2ITO.rec.gas.prmtop 2ITO.rec.gas.rst7
+
+gascomplex = combine {rec lig}
+savepdb gascomplex 2ITO.gefitinib.bcc.gas.complex.pdb
+saveamberparm gascomplex 2ITO.gefitinib.bcc.gas.complex.prmtop 2ITO.gefitinib.bcc.gas.complex.rst7
+

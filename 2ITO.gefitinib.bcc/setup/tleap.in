@@ -1,0 +1,39 @@
+# load the AMBER force fields
+source /home/qcai1/amber18/dat/leap/cmd/oldff/leaprc.ff14SB
+source leaprc.gaff
+
+# load force field parameters for ligand
+loadAmberParams frcmod.ionsjc_tip3p
+loadAmberParams gefitinib.bcc.precharged.frcmod
+
+# load the coordinates and create the systems
+ligand = loadmol2 /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/running_docked_scored_ligands/gefitinib.bcc.mol2
+m1 = loadpdb /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/001.protein/0.15_80_10_pH6.5_2ITO_fixed_loop_701_982.result_noH.pdb
+m2 = loadpdb /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/001.protein/0.15_80_10_pH6.5_2ITO_fixed_loop_701_982.result_noH_M790.pdb
+#w =  loadpdb /home/qcai1/Desktop/FE_TI/EGFR_2ITO/EGFR_MD/2ITO.gefitinib.bcc/002.tleap_build/water_ions.pdb
+
+complex = combine {m1 m2 ligand}
+complex1 = combine {m1 ligand}
+complex2 = combine {m2 ligand}
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+charge complex #3.0
+charge complex1 #3.0
+charge complex2 #3.0
+
+solvateoct complex TIP3PBOX 12.0
+#addions complex  Na+ 0
+addions complex  Cl- 4
+charge  complex #0.0
+
+
+set default nocenter on
+
+
+# create complex in solution
+savepdb complex complex.pdb
+saveamberparm complex complex.parm7 complex.rst7
+
+quit
+
+
